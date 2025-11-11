@@ -5,6 +5,8 @@
 #import fontawesome: fa-icon
 
 #let darkmode = true
+#let version = "1.0.0-beta.1"
+
 #let text_color = if darkmode { luma(200) } else { luma(0) }
 #let inline_emoji = text.with(top-edge: "bounds")
 
@@ -25,7 +27,7 @@
 #set heading(numbering: (n1, ..x) => {
   numbering("1.1", if n1 - 1 < 0 { 0 } else { n1 - 1 }, ..x)
 })
-#set document(title: "NZB File Specification - E2EE Extension")
+#set document(title: [NZB File Specification - #version])
 
 #let cleartext = [#text(fill: red, [cleartext])]
 #let ciphertext = [#text(fill: green, [ciphertext])]
@@ -70,6 +72,7 @@
   body
 }
 
+#align(center)[#title()]
 #outline(depth: 3)
 
 = Disclaimer

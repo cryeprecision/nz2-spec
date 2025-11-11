@@ -1,0 +1,29 @@
+name: Build
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+      - uses: typst-community/setup-typst@v4
+      - name: Install Fonts
+        run: |
+          sudo apt-get update && \
+          sudo apt-get install -y wget unzip && \
+          wget -qO fontawesome.zip https://use.fontawesome.com/releases/v7.1.0/fontawesome-free-7.1.0-desktop.zip && \
+          unzip -q fontawesome.zip -d fontawesome && \
+          sudo mkdir -p /usr/share/fonts/truetype/fontawesome && \
+          sudo cp fontawesome/fontawesome-free-7.1.0-desktop/otfs/*.otf /usr/share/fonts/truetype/fontawesome/ && \
+          wget -qO jetbrains-mono.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip && \
+          unzip -q jetbrains-mono.zip -d jetbrains-mono && \
+          sudo mkdir -p /usr/share/fonts/truetype/jetbrains-mono && \
+          sudo cp jetbrains-mono/*.ttf /usr/share/fonts/truetype/jetbrains-mono/ && \
+          sudo fc-cache -fv
+      - name: Build Documents
+        run: ./build.sh
+      - uses: softprops/action-gh-release@v2
+        if: github.ref_type == 'tag'
+        with:
+          files: nz2-spec.*.pdf
