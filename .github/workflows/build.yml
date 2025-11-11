@@ -1,7 +1,46 @@
-name: Build
-on: [push]
+name: Release
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
 jobs:
-  build:
+  create-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Get the release version from the tag
+        if: env.VERSION == ''
+        run: |
+          version=$(echo "${{ github.ref_name }}" | sed 's/^v//')
+          echo "VERSION=$version" >> $GITHUB_ENV
+      - name: Show the version
+        run: |
+          echo "version is: $VERSION"
+      - name: Check that tag version and Cargo.toml version are the same
+        run: |
+          if ! grep -q "#let version = \"$VERSION\"" nz2-spec.typ; then
+            echo "version does not match nz2-spec.yml" >&2
+            exit 1
+          fi
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          prerelease_flag=""
+          if echo "$VERSION" | grep -q "-beta."; then
+            prerelease_flag="--prerelease"
+          fi
+          gh release create "v$VERSION" --draft --verify-tag \
+            --title "v$VERSION" "$prerelease_flag"
+    outputs:
+      version: ${{ env.VERSION }}
+
+  build-release:
+    needs: ['create-release']
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -23,7 +62,12 @@ jobs:
           sudo fc-cache -fv
       - name: Build Documents
         run: ./build.sh
-      - uses: softprops/action-gh-release@v2
-        if: github.ref_type == 'tag'
-        with:
-          files: nz2-spec.*.pdf
+      - name: Upload Documents
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="${{ needs.create-release.outputs.version }}"
+          mv nz2-spec.light.pdf "nz2-spec-$version-light.pdf"
+          mv nz2-spec.dark.pdf "nz2-spec-$version-dark.pdf"
+          gh release upload "v$version" \
+            "nz2-spec-$version-light.pdf" "nz2-spec-$version-dark.pdf"
