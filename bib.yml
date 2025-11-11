@@ -1,0 +1,377 @@
+libsodium-aead:
+  type: Web
+  title: AEAD constructions
+  url:
+    value: https://libsodium.gitbook.io/doc/secret-key_cryptography/aead
+    date: 2025-10-18
+
+libsodium-authenticated-encryption:
+  type: Web
+  title: Authenticated encryption
+  url:
+    value: https://libsodium.gitbook.io/doc/secret-key_cryptography/secretbox
+    date: 2025-10-18
+
+libsodium-authenticated-encryption-combined-mode:
+  type: Web
+  title: Authenticated encryption - Combined mode
+  url:
+    value: https://libsodium.gitbook.io/doc/secret-key_cryptography/secretbox#combined-mode
+    date: 2025-10-18
+
+libsodium-chacha20-poly1305:
+  type: Web
+  title: ChaCha20-Poly1305
+  url:
+    value: https://libsodium.gitbook.io/doc/secret-key_cryptography/aead/chacha20-poly1305
+    date: 2025-10-18
+
+libsodium-xchacha20-poly1305-construction:
+  type: Web
+  title: XChaCha20-Poly1305 construction
+  url:
+    value: https://libsodium.gitbook.io/doc/secret-key_cryptography/aead/chacha20-poly1305/xchacha20-poly1305_construction
+    date: 2025-10-18
+
+libsodium-chacha20-ietf-construction:
+  type: Web
+  title: ChaCha20
+  url:
+    value: https://libsodium.gitbook.io/doc/secret-key_cryptography/aead/chacha20-poly1305/ietf_chacha20-poly1305_construction
+    date: 2025-10-18
+
+libsodium-chacha20-poly1305-ietf-construction:
+  type: Web
+  title: IETF ChaCha20-Poly1305 construction
+  url:
+    value: https://libsodium.gitbook.io/doc/secret-key_cryptography/aead/chacha20-poly1305/ietf_chacha20-poly1305_construction
+    date: 2025-10-18
+
+libsodium-aead-nonces:
+  type: Web
+  title: AEAD constructions - Nonces
+  url:
+    value: https://libsodium.gitbook.io/doc/secret-key_cryptography/aead#nonces
+    date: 2025-10-18
+
+libsodium-xchacha20-poly1305-tag-placement-git:
+  type: Web
+  title: Tag placement in combined mode of libsodium XChaCha20-Poly1305
+  url:
+    value: https://github.com/jedisct1/libsodium/blob/0a9450c679480a187e7f9e77d55b76fad92991ea/src/libsodium/crypto_aead/xchacha20poly1305/aead_xchacha20poly1305.c#L146-L172
+    date: 2025-10-18
+
+libsodium-chacha20:
+  type: Web
+  title: ChaCha20
+  url:
+    value: https://doc.libsodium.org/doc/advanced/stream_ciphers/chacha20
+    date: 2025-10-23
+
+libsodium-hkdf:
+  type: Web
+  title: HKDF - HMAC-based Extract-and-Expand Key Derivation Function
+  url:
+    value: https://doc.libsodium.org/doc/key_derivation/hkdf
+    date: 2025-10-23
+
+chacha20-poly1305-ietf-rfc:
+  type: Web
+  title: RFC 8439 - ChaCha20 and Poly1305 for IETF Protocols
+  url:
+    value: https://datatracker.ietf.org/doc/html/rfc8439
+    date: 2025-10-18
+
+base64-variants-summary:
+  type: Web
+  title: Base64 - Variants summary table
+  url:
+    value: https://en.wikipedia.org/wiki/Base64#Variants_summary_table
+    date: 2025-10-18
+
+base64-rfc:
+  type: Web
+  title: RFC 4648 - The Base16, Base32, and Base64 Data Encodings - Base 64 Encoding
+  url:
+    value: https://datatracker.ietf.org/doc/html/rfc4648#section-4
+    date: 2025-10-18
+
+chacha20-poly1305-rust:
+  type: Web
+  title: RustCrypto/AEADs - chacha20poly1305
+  url:
+    value: https://docs.rs/chacha20poly1305/latest/chacha20poly1305/
+    date: 2025-10-18
+
+chacha20-poly1305-cpp:
+  type: Web
+  title: Crypto++ - ChaCha20Poly1305
+  url:
+    value: https://cryptopp.com/docs/ref/struct_cha_cha20_poly1305.html
+    date: 2025-10-18
+
+chacha20-poly1305-nodejs:
+  type: Web
+  title: Node.js - Crypto
+  url:
+    value: https://nodejs.org/api/crypto.html#cryptocreatecipherivalgorithm-key-iv-options
+    date: 2025-10-23
+
+nzb-format-specification:
+  type: Web
+  title: NZB Format Specification
+  url:
+    value: https://sabnzbd.org/wiki/extra/nzb-spec
+    date: 2025-10-18
+
+rust-std-add-with-wrapping:
+  type: Web
+  title: Rust Standard Library - wrapping_add
+  url:
+    value: https://doc.rust-lang.org/std/primitive.u64.html#method.wrapping_add
+    date: 2025-10-18
+
+chacha20-poly1305-performance:
+  type: Web
+  title: ChaCha20-Poly1305 Performance
+  url:
+    value: https://en.wikipedia.org/wiki/ChaCha20-Poly1305#Performance
+    date: 2025-10-18
+
+yenc-spec:
+  type: Web
+  title: yEncode - A quick and dirty encoding for binaries (1.3)
+  url:
+    value: http://www.yenc.org/yenc-draft.1.3.txt
+    date: 2025-10-19
+
+sha-function-comparison:
+  type: Web
+  title: Comparison of SHA functions
+  url:
+    value: https://en.wikipedia.org/wiki/SHA-2#Comparison_of_SHA_functions
+    date: 2025-10-20
+
+json-rfc:
+  type: Web
+  title: RFC 8259 - The JavaScript Object Notation (JSON) Data Interchange Format
+  url:
+    value: https://datatracker.ietf.org/doc/html/rfc8259
+    date: 2025-10-20
+
+max-safe-integer-js:
+  type: Web
+  title: MDN - JavaScript - Number.MAX_SAFE_INTEGER
+  url:
+    value: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
+    date: 2025-10-20
+
+semantic-versioning:
+  type: Web
+  title: Semantic Versioning 2.0.0
+  url:
+    value: https://semver.org/
+    date: 2025-10-20
+
+jq:
+  type: Web
+  title: jq - Command-line JSON processor
+  url:
+    value: https://stedolan.github.io/jq/
+    date: 2025-10-20
+
+rapidyenc:
+  type: Web
+  title: animetosho/rapidyenc
+  url:
+    value: https://github.com/animetosho/rapidyenc
+    date: 2025-10-21
+
+minisign:
+  type: Web
+  title: Minisign - A dead simple tool to sign files and verify signatures.
+  url:
+    value: https://jedisct1.github.io/minisign/
+    date: 2025-10-21
+
+csprng:
+  type: Web
+  title: Secure Random Generators (CSPRNG)
+  url:
+    value: https://cryptobook.nakov.com/secure-random-generators/secure-random-generators-csprng
+    date: 2025-10-23
+
+wireguard-whitepaper:
+  type: Web
+  title: "WireGuard: Next Generation Kernel Network Tunnel"
+  url:
+    value: https://www.wireguard.com/papers/wireguard.pdf
+    date: 2025-10-23
+
+tls-1-3-rfc:
+  type: Web
+  title: RFC 8446 - The Transport Layer Security (TLS) Protocol Version 1.3
+  url:
+    value: https://datatracker.ietf.org/doc/html/rfc8446
+    date: 2025-10-23
+
+chacha20-python:
+  type: Web
+  title: PyCryptodome - ChaCha20 and XChaCha20
+  url:
+    value: https://pycryptodome.readthedocs.io/en/latest/src/cipher/chacha20.html
+    date: 2025-10-23
+
+chacha20-nodejs:
+  type: Web
+  title: Node.js - Crypto - getCiphers
+  url:
+    value: https://nodejs.org/api/crypto.html#cryptogetciphers
+    date: 2025-10-23
+
+chacha20-rust:
+  type: Web
+  title: RustCrypto/stream-ciphers - chacha20
+  url:
+    value: https://docs.rs/chacha20/latest/chacha20/
+    date: 2025-10-23
+
+chacha20-java:
+  type: Web
+  title: Java Security Standard Algorithm Names - Cipher Algorithms
+  url:
+    value: https://docs.oracle.com/en/java/javase/25/docs/specs/security/standard-names.html#cipher-algorithms
+    date: 2025-10-23
+
+chacha20-cpp:
+  type: Web
+  title: Crypto++ - ChaChaTLS
+  url:
+    value: https://cryptopp.com/wiki/ChaChaTLS
+    date: 2025-10-23
+
+hkdf-rfc:
+  type: Web
+  title: RFC 5869 - HMAC-based Extract-and-Expand Key Derivation Function (HKDF)
+  url:
+    value: https://datatracker.ietf.org/doc/html/rfc5869
+    date: 2025-10-23
+
+hkdf-wikipedia:
+  type: Web
+  title: HKDF
+  url:
+    value: https://en.wikipedia.org/wiki/HKDF
+    date: 2025-10-23
+
+hkdf-python:
+  type: Web
+  title: PyCryptodome - HKDF
+  url:
+    value: https://pycryptodome.readthedocs.io/en/latest/src/protocol/kdf.html#hkdf
+    date: 2025-10-23
+
+hkdf-nodejs:
+  type: Web
+  title: Node.js - Crypto - hkdf
+  url:
+    value: https://nodejs.org/api/crypto.html#cryptohkdfdigest-ikm-salt-info-keylen-callback
+    date: 2025-10-23
+
+hkdf-java:
+  type: Web
+  title: patrickfav/hkdf
+  url:
+    value: https://docs.oracle.com/en/java/javase/25/docs/specs/security/standard-names.html#kdf-algorithms
+    date: 2025-10-23
+
+hkdf-rust:
+  type: Web
+  title: RustCrypto/KDFs - hkdf
+  url:
+    value: https://docs.rs/hkdf/latest/hkdf/
+    date: 2025-10-23
+
+hkdf-cpp:
+  type: Web
+  title: Crypto++ - HKDF
+  url:
+    value: https://www.cryptopp.com/docs/ref/class_h_k_d_f.html
+    date: 2025-10-23
+
+chacha20-csprng:
+  type: Web
+  title: Cryptographically secure pseudo-random number generators (CSPRNGs)
+  url:
+    value: https://rust-random.github.io/book/guide-rngs.html#cryptographically-secure-pseudo-random-number-generators-csprngs
+    date: 2025-10-26
+
+rust-rand-alphnum-rejection-sampling:
+  type: Web
+  title: rust-random/rand - src/distr/other.rs
+  url:
+    value: https://github.com/rust-random/rand/blob/a8208d47b249dfbb2a9fc83ea7354426ed25ca06/src/distr/other.rs#L137-L154
+    date: 2025-10-26
+
+storage-capacity-worldwide:
+  type: Web
+  title: "Big data statistics: How much data is there in the world?"
+  url:
+    value: https://rivery.io/blog/big-data-statistics-how-much-data-is-there-in-the-world/
+    date: 2025-10-26
+
+birthday-probability-table:
+  type: Web
+  title: Birthday problem - Probability table
+  url:
+    value: https://en.wikipedia.org/wiki/Birthday_problem#Probability_table
+    date: 2025-10-26
+
+birthday-problem-calculator:
+  type: Web
+  title: Generalized Birthday Problem Calculator
+  url:
+    value: https://www.bdayprob.com/
+    date: 2025-10-26
+
+unix-time:
+  type: Web
+  title: Unix time
+  url:
+    value: https://en.wikipedia.org/wiki/Unix_time
+    date: 2025-11-03
+
+rust-primitive-types:
+  type: Web
+  title: Rust Primitive Types
+  url:
+    value: https://doc.rust-lang.org/std/#primitives
+    date: 2025-11-04
+
+rfc-keywords:
+  type: Web
+  title: RFC 2119 - Key words for use in RFCs to Indicate Requirement Levels
+  url:
+    value: https://datatracker.ietf.org/doc/html/rfc2119
+    date: 2025-11-04
+
+crypto-wearout:
+  type: Web
+  title: Cryptographic Wear-Out for Symmetric Encryption
+  url:
+    value: https://soatok.blog/2020/12/24/cryptographic-wear-out-for-symmetric-encryption/
+    date: 2025-11-04
+
+iana-aead:
+  type: Web
+  title: IANA - Authenticated Encryption with Associated Data (AEAD) Parameters
+  url:
+    value: https://www.iana.org/assignments/aead-parameters/aead-parameters.xhtml
+    date: 2025-11-06
+
+rfc-netnews-article-format:
+  type: Web
+  title: RFC 5536 - Netnews Article Format
+  url:
+    value: https://datatracker.ietf.org/doc/html/rfc5536
+    date: 2025-11-06
